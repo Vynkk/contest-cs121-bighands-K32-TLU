@@ -2,21 +2,19 @@
 using namespace std;
 int main()
 {
-    long n,i;
-    bool ktshh=true;
+    long n;
     cin>>n;
-    i=1;
-    for(n;n>i;i--){
-        for(int j=2;j<n;j++){
-            if(n%j==0){
-                ktshh=false;
-                break;
+    for(int i=n;i>=0;i--){
+        long x=0;
+        for(int j=1;j<i;j++){
+            if(i%j==0){
+                x+=j;
             }
         }
-        if(ktshh==true){
-            cout<<n;
+        if(x==i){
+            cout<<i;
             break;
         }
     }
-    
+    return 0;
 }
